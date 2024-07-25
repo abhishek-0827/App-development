@@ -14,6 +14,7 @@ TailwindCSS framework guide : https://tailwindcss.com/docs/guides/create-react-a
 3.) npm i aos
 4.) npm i react-carousel-cards-npm
 5.) npm i ngx-slick-carousel
+6.) npm i react-slick
 
 
 
