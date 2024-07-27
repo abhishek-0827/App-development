@@ -17,5 +17,6 @@ TailwindCSS framework guide : https://tailwindcss.com/docs/guides/create-react-a
 6.) npm i react-slick
 7.) npm i react-axios
 8.) npm i react-router-dom
+9.) npm i react-scroll
 
 
