@@ -5,6 +5,7 @@ export const FRAME=[{
     productname:"Dynamic Dinosaur Alarm Clock",
     price:199,
     productimage:"https://m.media-amazon.com/images/I/41F9G9JKy7L._SX522_.jpg"
+    
 },
 {
     id:2,
@@ -62,6 +63,12 @@ export const FRAME=[{
 {
     id:11,
     productname:"Frame11",
+    price:999,
+    productimage:abc
+},
+{
+    id:12,
+    productname:"Frame12",
     price:999,
     productimage:abc
 },
