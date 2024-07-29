@@ -20,4 +20,5 @@ TailwindCSS framework guide : https://tailwindcss.com/docs/guides/create-react-a
 9.) npm i react-scroll
 10.) npm i @react-oauth/google
 11.) npm install gapi-script react-google-login
-
+12.) npm install @fortawesome/free-solid-svg-icons
+13.)npm install @fortawesome/react-fontawesome
