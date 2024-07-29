@@ -80,14 +80,12 @@ const Products = () => {
       <span id="products"></span>
       <div className="py-20">
         <div className="container">
-          {/* Heading section  */}
           <div className="text-center mb-20">
             <h1 className="text-4xl font-bold font-cursive text-gray-800">
               Explore our products 
             </h1>
           </div>
 
-          {/* Services Card section  */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-5 place-items-center ">
             {ServicesData.map((service) => (
               <div
@@ -118,3 +116,4 @@ const Products = () => {
 };
 
 export default Products;
+

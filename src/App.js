@@ -12,6 +12,7 @@ import { Product1Context } from './context/Product1_context';
 import Product1 from './home/Product1';
 import Cart from './home/Cart';
 
+
 function App() {
   const [query, setQuery] = useState("");
 
