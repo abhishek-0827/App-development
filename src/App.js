@@ -37,6 +37,8 @@ import Home from './home/Home';
 import Navbar from './home/Navbar';
 import Fav from './home/Fav';
 import Cart from './home/Cart';
+import { Product1Context } from './context/Product1_context';
+import Product1 from './home/Product1';
 
 function App() {
   const [query, setQuery] = useState("");
@@ -47,6 +49,7 @@ function App() {
 
   return (
     <div className="App">
+       <Product1Context>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -55,9 +58,11 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/fav' element={<Fav/>}/>
+          <Route path='/frames' element={<Product1/>}/>
           
         </Routes>
       </Router>
+      </Product1Context>
     </div>
   );
 }

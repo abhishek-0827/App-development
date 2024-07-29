@@ -1,33 +1,41 @@
+
+
 import React from "react";
-import Img2 from "../assests/IntoBox.webp";
+import { useNavigate } from "react-router-dom";
+
 const ServicesData = [
   {
     id: 1,
-    img: Img2,
+    img: "https://m.media-amazon.com/images/I/61Famx7xQwL._AC_UL480_FMwebp_QL65_.jpg",
     name: "Watches",
-    description:
-      "A watch is a timeless gift that captures moments and memories with elegance.",
+    description: "A watch is a timeless gift that captures moments and memories with elegance.",
     aosDelay: "100",
   },
   {
     id: 2,
-    img: Img2,
+    img: "https://m.media-amazon.com/images/I/51otHFiverL._SX300_SY300_QL70_FMwebp_.jpg",
     name: "Photo Frames",
-    description:
-      "A photo frame is a timeless gift that turns cherished moments into lasting memories.",
+    description: "A photo frame is a timeless gift that turns cherished moments into lasting memories.",
     aosDelay: "300",
   },
   {
     id: 3,
-    img: Img2,
+    img: "https://m.media-amazon.com/images/I/51da1HSwecL._SY500_.jpg",
     name: "Bracelets",
-    description:
-      "A bracelet is a stylish gift that wraps your wrist with cherished memories and elegance.",
+    description: "A bracelet is a stylish gift that wraps your wrist with cherished memories and elegance.",
     aosDelay: "500",
   },
- 
 ];
+
 const Services = () => {
+  const navigate = useNavigate();
+
+  const handleCardClick = (serviceName) => {
+    if (serviceName === "Photo Frames") {
+      navigate('/frames'); // Change '/frames' to the actual path you have set for the Frames page
+    }
+  };
+
   return (
     <>
       <span id="about"></span>
@@ -41,25 +49,27 @@ const Services = () => {
           </div>
 
           {/* Services Card section  */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-14 md:gap-5 place-items-center ">
+          <div className="text-white grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-14 md:gap-5 place-items-center">
             {ServicesData.map((service) => (
               <div
+                key={service.id}
                 data-aos="fade-up"
                 data-aos-delay={service.aosDelay}
-                className="rounded-3xl py-20 bg-slate-100 hover:bg-primary hover:text-black relative shadow-xl duration-high group max-w-[300px]"
+                className="rounded-3xl py-20 bg-black hover:bg-primary relative shadow-xl duration-high group max-w-[300px] cursor-pointer"
+                onClick={() => handleCardClick(service.name)}
               >
-                <div className="h-[122px]">
+                <div className="h-[160px]">
                   <img
                     src={service.img}
                     alt=""
-                    className="max-w-[200px] block mx-auto transform -translate-y-14
-                  group-hover:scale-105 group-hover:rotate-6 duration-300"
+                    className="rounded-3xl max-w-[200px] block mx-auto transform -translate-y-14
+                      group-hover:scale-105 group-hover:rotate-6 duration-300"
                   />
                 </div>
                 <div className="p-4 text-center">
-                  <div className="w-full "></div>
+                  <div className="w-full"></div>
                   <h1 className="text-xl font-bold">{service.name}</h1>
-                  <p className="text-gray-500 group-hover:text-black duration-high text-sm line-clamp-2">
+                  <p className="duration-high text-sm line-clamp-2">
                     {service.description}
                   </p>
                 </div>
