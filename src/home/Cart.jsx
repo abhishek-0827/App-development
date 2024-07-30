@@ -38,7 +38,7 @@ const Cart = () => {
             <p className="text-2xl font-bold text-gray-800">Subtotal: ₹{totalAmount}</p>
             <div className="flex justify-center space-x-4">
               <button className="w-44 h-12 bg-[#2874f0] text-white border-none rounded-lg cursor-pointer text-lg transition-colors duration-300 hover:bg-[#0056b3]" onClick={() => navigate("/")}>Continue Shopping</button>
-              <button className="w-44 h-12 bg-[#2874f0] text-white border-none rounded-lg cursor-pointer text-lg transition-colors duration-300 hover:bg-[#0056b3]" onClick={() => navigate("/")}>Pay Now</button>
+              <button className="w-44 h-12 bg-[#2874f0] text-white border-none rounded-lg cursor-pointer text-lg transition-colors duration-300 hover:bg-[#0056b3]" onClick={() => navigate("/pay")}>Pay Now</button>
             </div>
           </div>
         ) : (

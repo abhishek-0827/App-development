@@ -1,46 +1,45 @@
-
+// src/App.js
 import './App.css';
-import { useEffect, useState } from 'react';
-import "aos/dist/aos.css";
-import Login from './Authentication/Login';
-import Register from './Authentication/Register';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './home/Home';
-import Navbar from './home/Navbar';
+import Login from './Authentication/Login';
+import Register from './Authentication/Register';
 import Fav from './home/Fav';
-import { Product1Context } from './context/Product1_context';
-import Product1 from './home/Product1';
 import Cart from './home/Cart';
-
+import Product1 from './home/Product1';
+import Review from './home/Review'; // Import Review component
+import { Product1Context } from './context/Product1_context';
+import Custom from './Payment/Custom';
+import Pay from './Payment/Pay';
+import Receipt from './Payment/Receipt';
 
 function App() {
-  const [query, setQuery] = useState("");
-
-  const handleInputChange = (e) => {
-    setQuery(e.target.value);
-  };
-
   return (
     <div className="App">
-       <Product1Context>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path='/home' element={<Home/>}/>
-          <Route path="/login" element={<Login/>} />
-          <Route path="/register" element={<Register />} />
-          <Route path='/cart' element={<Cart/>}/>
-          <Route path='/fav' element={<Fav/>}/>
-          <Route path='/frames' element={<Product1/>}/>
-          
-        </Routes>
-      </Router>
+      <Product1Context>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/fav" element={<Fav />} />
+            <Route path="/frames" element={<Product1 />} />
+            <Route path="/cust" element={<Custom/>} />
+            <Route path="/pay" element={<Pay />} />
+            <Route path="/receipt" element={<Receipt/>} />
+            <Route path="/product/:id/review" element={<Review />} /> {/* Add review page route */}
+            <Route path="/buy" element={<Custom/>}></Route>
+          </Routes>
+        </Router>
       </Product1Context>
     </div>
   );
 }
 
 export default App;
+
 
 // import './App.css';
 // import { useEffect, useState } from 'react';
