@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
   // export const FRAME = [
   //     {
   //       id: 1,
@@ -347,6 +348,8 @@
   //       ];
         
 
+=======
+>>>>>>> 5ba61d672ea2bb62ce5ea334b93e86faf0fbcc2d
 import abc from "../assests/alarmclock1.jpg";
 export const FRAME=[{
     id:1,
@@ -564,5 +567,9 @@ export const FRAME=[{
     price:249,
     productimage:"https://m.media-amazon.com/images/I/21RnjTxGaaL.jpg"
 },
+<<<<<<< HEAD
 ]
 
+=======
+]
+>>>>>>> 5ba61d672ea2bb62ce5ea334b93e86faf0fbcc2d

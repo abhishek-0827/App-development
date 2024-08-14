@@ -3,11 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
 
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
 
+=======
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+>>>>>>> 5ba61d672ea2bb62ce5ea334b93e86faf0fbcc2d
     "@react-oauth/google": "^0.12.1",
     "@react-spring/web": "^9.7.4",
     "@testing-library/jest-dom": "^5.17.0",
@@ -17,6 +22,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
+<<<<<<< HEAD
 
     "js-cookie": "^3.0.5",
     "json-server": "^1.0.0-beta.1",
@@ -28,10 +34,16 @@
     "jsonwebtoken": "^9.0.2",
     "lottie-react": "^2.4.0",
 
+=======
+    "json-server": "^1.0.0-beta.1",
+    "jsonwebtoken": "^9.0.2",
+    "lottie-react": "^2.4.0",
+>>>>>>> 5ba61d672ea2bb62ce5ea334b93e86faf0fbcc2d
     "ngx-slick-carousel": "^17.0.0",
     "react": "^18.3.1",
     "react-axios": "^2.0.6",
     "react-carousel-cards-npm": "^1.1.5",
+<<<<<<< HEAD
 
     "react-cookie": "^7.2.0",
     "react-dom": "^18.3.1",
@@ -41,6 +53,10 @@
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
 
+=======
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
+>>>>>>> 5ba61d672ea2bb62ce5ea334b93e86faf0fbcc2d
     "react-router-dom": "^6.25.1",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.9.0",

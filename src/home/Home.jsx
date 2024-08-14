@@ -29,8 +29,12 @@ const Home=()=> {
 
 
   return (
+<<<<<<< HEAD
     <div style={{ backgroundColor:"white" }} className="App bg-white bg-amber-50 dark:bg-gray-900 dark:text-white duration-200 overflow-x-hidden">
 
+=======
+    <div className="App bg-white bg-amber-50 dark:bg-gray-900 dark:text-white duration-200 overflow-x-hidden">
+>>>>>>> 5ba61d672ea2bb62ce5ea334b93e86faf0fbcc2d
     <Navbar/>
     <Banner/>
     <Intro />

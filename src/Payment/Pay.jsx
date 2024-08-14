@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> 5ba61d672ea2bb62ce5ea334b93e86faf0fbcc2d
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const Pay = () => {
@@ -7,6 +11,7 @@ const Pay = () => {
   const [expiryDate, setExpiryDate] = useState('');
   const [cvv, setCvv] = useState('');
 
+<<<<<<< HEAD
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [address1, setAddress1] = useState('');
@@ -74,6 +79,19 @@ const Pay = () => {
   };
     // Navigate to the /receipt page with receipt data
    
+=======
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { recipientName, customMessage } = location.state || {};
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate('/reciept', {
+      state: { recipientName, customMessage, cardHolderName, amount: '500' }
+    });
+  };
+
+>>>>>>> 5ba61d672ea2bb62ce5ea334b93e86faf0fbcc2d
   const handleChange = (e) => {
     let value = e.target.value;
     value = value.replace(/\D/g, '');
@@ -155,7 +173,11 @@ const Pay = () => {
           <input
             type="text"
             id="price"
+<<<<<<< HEAD
             value={totalAmount}
+=======
+            value="500"
+>>>>>>> 5ba61d672ea2bb62ce5ea334b93e86faf0fbcc2d
             readOnly
             className="p-2 border border-gray-300 rounded-md text-sm bg-gray-100"
           />

@@ -22,9 +22,12 @@ TailwindCSS framework guide : https://tailwindcss.com/docs/guides/create-react-a
 11.) npm install gapi-script react-google-login
 12.) npm install @fortawesome/free-solid-svg-icons
 13.)npm install @fortawesome/react-fontawesome
+<<<<<<< HEAD
 14.) npm install react-cookie
 
 
 ## In a single command :
 npm install react-icons aos react-carousel-cards-npm ngx-slick-carousel react-slick react-axios react-router-dom react-scroll @react-oauth/google gapi-script react-google-login @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome react-cookie
 
+=======
+>>>>>>> 5ba61d672ea2bb62ce5ea334b93e86faf0fbcc2d

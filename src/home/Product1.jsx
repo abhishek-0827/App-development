@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useState, useEffect, useRef, useContext } from 'react';
 // import { useLocation } from 'react-router-dom';
 // import Navbar from './Navbar';
@@ -163,6 +164,44 @@ const Product1 = () => {
 
   const scrollToProduct = (id) => {
     const index = products.findIndex(product => product.id === id);
+=======
+
+
+// import React from 'react';
+// import { FRAME } from "../components/Frame";
+// import Frame2 from "./Frames";
+// import Navbar from './Navbar';
+
+// const Product1 = () => {
+//   return (
+//     <div className='shop'>
+//         <Navbar/>
+//       <div className='shop-title'>
+//         <h1 className=' text-3xl font-bold text-gray-900 uppercase tracking-wide my-8 text-center'>Frames</h1>
+//       </div>
+//       <div className='product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-6  mx-auto'>
+//         {FRAME.map((product) => (
+//           <Frame2 key={product.id} data={product} />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Product1;
+import React, { useRef, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { FRAME } from "../components/Frame";
+import Frame2 from "./Frames";
+import Navbar from './Navbar';
+
+const Product1 = () => {
+  const productRefs = useRef([]);
+  const location = useLocation();
+
+  const scrollToProduct = (id) => {
+    const index = FRAME.findIndex(product => product.id === id);
+>>>>>>> 5ba61d672ea2bb62ce5ea334b93e86faf0fbcc2d
     if (index !== -1 && productRefs.current[index]) {
       productRefs.current[index].scrollIntoView({ behavior: 'smooth' });
     }
@@ -174,6 +213,7 @@ const Product1 = () => {
     if (scrollToId) {
       scrollToProduct(scrollToId);
     }
+<<<<<<< HEAD
   }, [location.search, products]);
 
   useEffect(() => {
@@ -185,10 +225,14 @@ const Product1 = () => {
     );
     setFilteredProducts(result);
   }, [searchQuery, priceRange, category, rating, products]);
+=======
+  }, [location.search]);
+>>>>>>> 5ba61d672ea2bb62ce5ea334b93e86faf0fbcc2d
 
   return (
     <div className='shop'>
       <Navbar />
+<<<<<<< HEAD
       <div className='flex mt-12'>
         {/* Filters Section */}
         <div 
@@ -299,5 +343,20 @@ const Product1 = () => {
     </div>
   );
 };
+=======
+     {/* <div className='shop-title'>
+        <h1 className='text-3xl font-bold text-gray-900 uppercase tracking-wide my-8 text-center'>Frames</h1>
+      </div>*/}
+      <div className='product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-6 mx-auto'>
+        {FRAME.map((product, index) => (
+          <div ref={el => productRefs.current[index] = el} key={product.id}>
+            <Frame2 data={product} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+>>>>>>> 5ba61d672ea2bb62ce5ea334b93e86faf0fbcc2d
 
 export default Product1;
